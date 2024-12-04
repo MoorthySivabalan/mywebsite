@@ -1,0 +1,162 @@
+.resource-hero {
+    background-image: linear-gradient(to bottom, #0097a7, #00798f);
+    color: #fff;
+    padding: 5em;
+    text-align: center;
+    animation: fadeIn 2s, scaleUp 2s;
+}
+
+.resource-catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+    animation: slideIn 2s;
+}
+.resource-catalogs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+    animation: slideIn 2s;
+}
+
+.resource-card {
+    background-color: #fff;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 35%;
+    animation: zoomIn 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.resource-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.resource-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.resource-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resource-card li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.resource-card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.resource-card-footer p {
+    margin-bottom: 0;
+    color: #999;
+}
+
+.data-science-card h3 {
+    color: #00698f; /* Blue-green header color */
+}
+
+.ml-tensorflow-card h3 {
+    color: #008000; /* Green header color */
+}
+
+.web-dev-react-card h3 {
+    color: #61dafb; /* Blue header color */
+}
+
+.ai-healthcare-card h3 {
+    color: #8b9467; /* Greenish-blue header color */
+}
+
+.cybersecurity-trends-card h3 {
+    color: #ff9900; /* Orange header color */
+}
+
+button {
+    background-color: #ff3737; /* Red color */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    padding: 12px 24px; /* Add padding for better look */
+    font-size: 16px; /* Increase font size */
+    border-radius: 8px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease-in-out; /* Add transition for hover effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to bottom, #ff3737, #ff0000);
+}
+
+button:hover {
+    background-color: #ff6666; /* Lighter red color on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add box shadow on focus */
+}
+
+button:active {
+    background-color: #ff0000; /* Darker red color on active */
+}
+
+
+@media (max-width: 768px) {
+    .resource-catalog {
+        flex-direction: column;
+    }
+    .resource-card {
+        width: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .resource-catalog {
+        flex-direction: column;
+    }
+    .resource-card {
+        width: 300px;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,170 @@
+.tutorial-hero {
+    background-image: linear-gradient(to bottom, #ff7048, #ff3d00);
+    color: #fff;
+    padding: 5em;
+    text-align: center;
+    animation: fadeIn 2s, scaleUp 2s;
+}
+
+.tutorial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tutorial-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+}
+
+.tutorial-category {
+    background-color: #fff;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.tutorial-category h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.tutorial-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tutorial-category li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.tutorial-recent {
+    padding: 2em;
+}
+
+.tutorial-recent-card {
+    background-color: #fff;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-recent-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.tutorial-recent-card p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+
+@media (max-width: 768px) {
+    .tutorial-categories {
+        flex-direction: column;
+    }
+    
+    .tutorial-categories {
+        flex-direction: column;
+    }
+    
+    .tutorial-category {
+        margin: 1em 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tutorial-hero {
+        padding: 2em;
+    }
+    
+    .tutorial-category {
+        padding: 0.5em;
+    }
+    
+    .tutorial-recent-card {
+        padding: 0.5em;
+    }
+}
+
+/* box shadows and borders */
+
+.tutorial-category {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.tutorial-recent-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* padding and margins */
+
+.tutorial-categories {
+    padding: 40px;
+}
+
+.tutorial-category {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.tutorial-recent {
+    padding: 40px;
+}
+
+.tutorial-recent-card {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* hover effects */
+
+.tutorial-category:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.tutorial-recent-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* animations */
+
+.tutorial-category {
+    transition: all 0.3s ease-in-out;
+}
+
+.tutorial-recent-card {
+    transition: all 0.3s ease-in-out;
+}
+
+/* call-to-action button */
+
+.cta-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #3e8e41;
+}
