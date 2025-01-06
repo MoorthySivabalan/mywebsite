@@ -1,163 +1,195 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
 }
-.overall{
+
+.overall {
     width: 100%;
     min-height: 100vh;
     background-color: black;
 }
-.navbar{
+
+.navbar {
     position: fixed;
     width: 100%;
     z-index: 999;
 }
+
 .navbar-collapse {
     flex-basis: 100%;
     flex-grow: 0;
     align-items: center;
 }
-.clr{
-    background-color: white!important;
-    color: black!important;
+
+.clr {
+    background-color: white !important;
+    color: black !important;
 }
-nav i{
+
+nav i {
     font-size: 20px; 
 }
-.dark-button:checked~.navbar{
-    background-color:rgb(40, 40, 40)!important;
-    color: white!important;
+
+.dark-button:checked~.navbar {
+    background-color: rgb(40, 40, 40) !important;
+    color: white !important;
 }
-.dark-button:checked~.home{
-    background-color:black;
+
+.dark-button:checked~.home {
+    background-color: black;
     color: white;
 }
-.dark-button:checked~.about{
-    background-color:rgba(20, 20, 20);
+
+.dark-button:checked~.about {
+    background-color: rgba(20, 20, 20);
     color: white;
 }
-.dark-button:checked~.education{
-    background-color:black;
+
+.dark-button:checked~.education {
+    background-color: black;
     color: white;
 }
-.dark-button:checked~.contact{
-    background-color:rgba(20, 20, 20);
+
+.dark-button:checked~footer {
+    background-color: black;
     color: white;
 }
-.dark-button:checked~.contact form{
-    background-color:darkgrey;
-    color: white;
-}
-.dark-button:checked~footer{
-    background-color:black;
-    color: white;
-}
-.dark-button{
+
+.dark-button {
     display: none;
 }
 
 /* Home page styles */
-.home{
-    background-color:bisque;
+.home {
+    background-color: bisque;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 50px 30px;
     padding-top: 100px;
+    flex-wrap: wrap;
+    text-align: center;
 }
-.my-details{
+
+.my-details {
     padding: 30px;
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    max-width: 600px;
 }
-.category{
+
+.category {
     font-size: small;
 }
-.summary{
+
+.summary {
     font-size: small;
 }
-.my-photo{
+
+.my-photo {
     height: 300px;
     width: 280px;
-}
-.my-photo{
     box-shadow: 0px 3px 20px black;
 }
 
-
 /* About */
-.about{
+.about {
     width: 100%;
-    background-color:cornsilk;
+    background-color: cornsilk;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     padding: 50px 30px;
 }
-.edu-title{
+
+.edu-title {
     text-align: center;
     padding: 10px;
 }
-.personal-details{
+
+.personal-details {
     font-size: 13px;    
 }
-p i{
+
+p i {
     font-size: 20px;
 }
 
-
 /* Education styles */
-.education{
+.education {
     width: 100%;
-    background-color:lavender;
+    background-color: lavender;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     padding: 50px 30px;
 }
-.edu-title{
+
+.edu-title {
     text-align: center;
     padding: 10px;
 }
-.college{
+
+.college {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 40px 0px;
+    flex-wrap: wrap;
 }
-.college-content{
+
+.college-content {
     padding: 30px;
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
 }
-.college-photo{
-    width: 400px;
-    height: 280px;
+
+.college-photo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px 0;
 }
-.college-details{
+
+.college-details {
     font-size: small;
 }
 
-/* Footer page style */
-footer{
+.experience {
     width: 100%;
-    background-color:lightgreen;
+    background-color: ghostwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 30px;
+}
+.work-details {
+    font-size: small;
+}
+
+
+/* Footer page style */
+footer {
+    width: 100%;
+    background-color: lightgreen;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     padding: 50px 30px;
 }
-.icons{
+
+.icons {
     font-size: xx-large;
     display: flex;
     justify-content: space-evenly;
@@ -165,3 +197,49 @@ footer{
     gap: 20px;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .my-details {
+        text-align: center;
+    }
+
+    .about, .education {
+        text-align: center;
+    }
+
+    .college {
+        flex-direction: column;
+    }
+
+    .college-content, .college-photo {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .icons {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .my-photo {
+        width: 200px;
+        height: auto;
+    }
+
+    .icons {
+        gap: 10px;
+    }
+}
